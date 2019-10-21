@@ -3,14 +3,14 @@
 // Добавить поле details, которое будет содержать объект с полями model и color
 
 let obj = {
-  product: "iphone"
+    product: "iphone"
 };
 console.log(obj);
 obj.price = 1000;
 obj.currenct = "dollar";
 console.log(obj);
 obj.details = {
-  model: "xl",
-  color: "gold"
+    model: "xl",
+    color: "gold"
 };
 console.log(obj);
