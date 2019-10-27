@@ -49,3 +49,46 @@ function randomNumber(x) {
 }
 
 randomNumber(1);
+
+// Создать функцию, которая принимает число n и возвращает массив, заполненный числами от 1 до n: getArray(10); // [1,2,3,4,5,6,7,8,9,10]
+function getArray(x) {
+    let arr = [];
+    for (let i = 0; i < x; i++) {
+        arr.push(i + 1);
+    }
+    console.log(arr);
+}
+getArray(10);
+
+// Создать функцию, которая принимает массив, а возвращает новый массив с дублированными элементами входного массива:
+// doubleArray([1,2,3]) // [1,2,3,1,2,3]
+
+function doubleArray(x) {
+    let arr2 = [];
+    for (let i = 0; i < x.length; i++) {
+        arr2.push(x[i]);
+    }
+    console.log(x.concat(arr2));
+}
+
+doubleArray([1, 2, 3]);
+
+// Создать функцию, которая принимает произвольное (любое) число массивов и удаляет из каждого массива первый элемент, а возвращает массив из оставшихся значений:
+// changeCollection([1,2,3], [‘a’, ’b’, ‘c’]) → [ [2,3], [‘b’, ‘c’] ], changeCollection([1,2,3]) → [ [2,3] ] и т.д.
+
+function changeCollections() {
+    let x = arguments;
+    let arr = [];
+    console.log(x.length);
+    for (let i = 0; i <= x.length - 1; i++) {
+        arguments[i].splice(0, 1);
+        arr[i] = arguments[i];
+    }
+    console.log(arr);
+}
+
+changeCollections([1, 2, 3], ["a", "b", "c"]);
+
+// Создать функцию которая принимает массив пользователей, поле на которое хочу проверить и значение на которое хочу проверять. Проверять что все аргументы переданы. Возвращать новый массив с пользователями соответсвующие указанным параметрам.
+
+// funcGetUsers(users, “gender”, “male”); // [ {name: “Denis”, age: “29”, gender: “male”} , {name: “Ivan”, age: “20”, gender: “male”} ]
